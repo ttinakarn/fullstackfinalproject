@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="text-center">Product List</h1>
-        <b-table striped hover :items="products"></b-table>
+        <b-table striped hover :items="products" :fields="fields"></b-table>
     </div>
 </template>
 
@@ -12,7 +12,22 @@ export default {
   data() {
     return {
       message: "Project 2",
-      products: []
+      products: [],
+      fields: [
+        {
+          key: "id",
+          sortable: true
+        },
+        {
+          key: "title",
+          sortable: true
+        },
+        {
+          key: "price",
+          sortable: true,
+          variant: 'danger'
+        }
+      ]
     };
   },
   mounted() {
