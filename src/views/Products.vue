@@ -16,13 +16,13 @@ export default {
     };
   },
   mounted() {
-      var instance = this;
-      axios
-        .get('https://shielded-spire-43023.herokuapp.com/api/products/')
-        .then(function(response){
-            console.log(response);
-            instance.products = response.data.data
-        });
+    var instance = this;
+    axios
+      .get("https://shielded-spire-43023.herokuapp.com/api/products/")
+      .then(function(response) {
+        console.log(response);
+        instance.products = response.data.data;
+      });
   }
 };
 </script>
